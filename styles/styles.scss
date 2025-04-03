@@ -1,0 +1,222 @@
+/* ------------------------------ */
+/* Ресет */
+/* ------------------------------ */
+
+*{-webkit-box-sizing: border-box; box-sizing: border-box;}
+*:before{-webkit-box-sizing: border-box; box-sizing: border-box;}
+*:after{-webkit-box-sizing: border-box; box-sizing: border-box;}
+html{display: flow-root;}
+body{display: flow-root; margin: 0px; padding: 0; min-height: 100vh; font-family: sans-serif; font-size: 14px;}
+div{display: flow-root;}
+a{margin: 0; padding: 0; outline: 0; background: transparent; color: #0073bd; cursor: pointer;}
+b{font-weight: bolder;}
+p{margin: 0; padding: 0;}
+span{margin: 0; padding: 0;}
+strong{font-weight: bolder;}
+object{margin: 0; padding: 0;}
+iframe{margin: 0; padding: 0; max-width: 100%;}
+h1{margin: 0; padding: 0; font-weight: normal; display: flow-root;}
+h2{margin: 0; padding: 0; font-weight: normal; display: flow-root;}
+h3{margin: 0; padding: 0; font-weight: normal; display: flow-root;}
+h4{margin: 0; padding: 0; font-weight: normal; display: flow-root;}
+h5{margin: 0; padding: 0; font-weight: normal; display: flow-root;}
+h6{margin: 0; padding: 0; font-weight: normal; display: flow-root;}
+img{max-width: 100%; display: inline-block; border-style: none;}
+pre{margin: 0; padding: 0;}
+code{margin: 0; padding: 0;}
+audio{margin: 0; padding: 0; display: inline-block;}
+video{margin: 0; padding: 0; display: inline-block;}
+form{margin: 0; padding: 0; display: flow-root;}
+textarea{margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; font-family: inherit; background: #fff; overflow: auto; z-index: 1;}
+select{margin: 0; padding: 0; border: 0; outline: 0; cursor: pointer; line-height: inherit; color: inherit; font-size: inherit; background: #fff;}
+option{cursor: pointer; line-height: inherit; color: inherit; font-size: inherit;}
+[type="text"]{margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; background: #fff; font-family: inherit;}
+[type="email"]{margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; background: #fff; font-family: inherit;}
+[type="password"]{margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; background: #fff; font-family: inherit;}
+[type="number"]{margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; background: #fff; font-family: inherit;}
+[type="checkbox"]{margin: 0; padding: 0; -webkit-box-sizing: inherit; box-sizing: inherit; display: inline-block; vertical-align: middle; cursor: pointer;}
+[type="radio"]{margin: 0; padding: 0; -webkit-box-sizing: inherit; box-sizing: inherit; display: inline-block; vertical-align: middle; cursor: pointer;}
+[type="file"]{margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit; line-height: inherit; background: transparent; font-family: inherit; cursor: pointer;}
+[type="file"]::-webkit-file-upload-button{border: 0; outline: 0; cursor: pointer; padding: 5px 10px;}
+[type="submit"]{margin: 0; padding: 0; border: 0; outline: 0; display: inline-block; font-size: inherit; line-height: inherit; background: transparent; font-family: inherit;  cursor: pointer; -webkit-appearance: button;}
+[type="submit"]::-moz-focus-inner{padding: 0; border: 0}
+[type="button"]{margin: 0; padding: 0; border: 0; outline: 0; display: inline-block; font-size: inherit; line-height: inherit; background: transparent; font-family: inherit; cursor: pointer; -webkit-appearance: button;}
+[type="button"]::-moz-focus-inner{padding: 0; border: 0}
+[type="reset"]{margin: 0; padding: 0; border: 0; outline: 0; display: inline-block; font-size: inherit; line-height: inherit; background: transparent; font-family: inherit; cursor: pointer; -webkit-appearance: button;}
+[type="reset"]::-moz-focus-inner{padding: 0; border: 0}
+[type="search"]{margin: 0; padding: 0; border: 0; outline: 0; display: inline-block; font-size: inherit; line-height: inherit; background: transparent; font-family: inherit; -webkit-appearance: textfield;}
+[type="search"]::-moz-focus-inner{padding: 0; border: 0}
+[type="search"]::-webkit-search-decoration{-webkit-appearance: none;}
+[type="search"]::-webkit-search-cancel-button{-webkit-appearance: none;}
+button{margin: 0; padding: 0; font-family: inherit; font-size: inherit; line-height: inherit; text-transform: none; overflow: visible; background: transparent; border: 0; cursor: pointer; -webkit-appearance: button;}
+button::-moz-focus-inner{padding: 0; border: 0}
+label{margin: 0; padding: 0; display: block; cursor: pointer;}
+ul{margin: 0; padding: 0; display: flow-root; list-style-position: inside; font-family: inherit; font-size: inherit; line-height: inherit;}
+ol{margin: 0; padding: 0; display: flow-root; list-style-position: inside; font-family: inherit; font-size: inherit; line-height: inherit;}
+li{margin: 0; padding: 0; font-family: inherit; font-size: inherit; line-height: inherit;}
+legend{margin: 0; padding: 0;}
+table{margin: 0; padding: 0; border-collapse: collapse; width: 100%;}
+thead{margin: 0; padding: 0;}
+tbody{margin: 0; padding: 0;}
+tfoot{margin: 0; padding: 0;}
+tr{margin: 0; padding: 0;}
+th{margin: 0; padding: 0;}
+td{margin: 0; padding: 0;}
+caption{margin: 0; padding: 0; display: flow-root;}
+article{margin: 0; padding: 0; display: flow-root;}
+aside{margin: 0; padding: 0; display: flow-root;}
+footer{margin: 0; padding: 0; display: flow-root;}
+header{margin: 0; padding: 0; display: flow-root;}
+nav{margin: 0; padding: 0; display: flow-root;}
+section{margin: 0; padding: 0; display: flow-root;}
+
+
+/* ------------------------------ */
+/* Миксины */
+/* ------------------------------ */
+
+@mixin ellipsis{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+@mixin scrollbar{
+	&::-webkit-scrollbar{width: 12px;}
+	&::-webkit-scrollbar-track{background: #ECECEC; border-radius: 10px;}
+	&::-webkit-scrollbar-thumb{background: #BFBFBF; border-radius: 10px; background-clip: padding-box; border: 2px solid transparent;}
+}
+
+/* ------------------------------ */
+/* Общие стили */
+/* ------------------------------ */
+
+[hidden]{
+	@media(min-width: 0px){display: none !important;}
+}
+a{
+	@media(min-width: 0px){text-decoration: none; color: #488EFB;}
+	&:hover{
+		@media(min-width: 0px){text-decoration: underline;}
+	}
+}
+body{
+	@media(min-width: 0px){font-size: 14px; overflow-y: scroll; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+}
+h2{
+	@media(min-width: 0px){}
+}
+
+/* ------------------------------ */
+/* Стили тестового задания */
+/* ------------------------------ */
+
+.aaa-{
+	&container{
+		@media(min-width: 0px){max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+	}
+	&form{
+		@media(min-width: 0px){background: #f9f9f9; padding: 20px; border-radius: 5px;}
+		&__group{
+			@media(min-width: 0px){margin-bottom: 15px;}
+		}
+		&__label{
+			@media(min-width: 0px){display: block; margin-bottom: 5px; font-weight: bold;}
+		}
+		&__input{
+			@media(min-width: 0px){width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;}
+		}
+		&__button{
+			@media(min-width: 0px){background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;}
+			&:hover{
+				@media(min-width: 0px){background-color: #45a049;}
+			}
+			&:disabled{
+				@media(min-width: 0px){background-color: #cccccc; cursor: not-allowed;}
+			}
+		}
+		&__error{
+			@media(min-width: 0px){color: #ff0000; margin-top: 10px;}
+		}
+		&__info{
+			@media(min-width: 0px){color: #666; padding: 10px;}
+		}
+	}
+	&accordion{
+		@media(min-width: 0px){width: 100%; max-width: 600px; margin: 0 auto; padding-top: 20px;}
+		&__item{
+			@media(min-width: 0px){margin-bottom: 5px; border: 1px solid #ddd; border-radius: 4px; position: relative;}
+		}
+		&__input{
+			@media(min-width: 0px){position: absolute; opacity: 0; z-index: -1;}
+			&:checked ~ .aaa-accordion__content{
+				@media(min-width: 0px){max-height: 500px; padding: 15px;}
+			}
+			&:checked ~ .aaa-accordion__header{
+				@media(min-width: 0px){background-color: #f5f5f5;}
+			}
+		}
+		&__header{
+			@media(min-width: 0px){display: flex; justify-content: space-between; padding: 10px 15px; background-color: #f1f1f1; cursor: pointer;}
+			&:hover{
+				@media(min-width: 0px){background-color: #e9e9e9;}
+			}
+		}
+		&__content{
+			@media(min-width: 0px){max-height: 0; overflow: hidden; transition: max-height 0.3s ease;}
+		}
+	}
+	&deal{
+		&__info{
+			@media(min-width: 0px){padding: 10px;}
+		}
+		&__price{
+			@media(min-width: 0px){color: #4CAF50; font-weight: bold;}
+		}
+	}
+}
+
+.loading-tasks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    width: 20px;
+    height: 20px;
+}
+
+.spinner .path {
+    stroke: #4CAF50;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+.task-status-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.status-circle {
+    flex-shrink: 0;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}

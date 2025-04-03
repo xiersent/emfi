@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AMOCRM Deal Viewer</title>
+	<meta charset="UTF-8">
+	<link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="aaa-container">
+		<h1>AMOCRM Deal Viewer</h1>
+
+		<div class="aaa-form">
+			<div class="aaa-form__group">
+				<label class="aaa-form__label" for="domain">Домен AMOCRM:</label>
+				<input class="aaa-form__input" type="text" id="domain" value="" placeholder="yourdomain.amocrm.ru">
+			</div>
+			<div class="aaa-form__group">
+				<label class="aaa-form__label" for="api-key">Access token:</label>
+				<input class="aaa-form__input" type="password" id="api-key" value="" placeholder="Введите ваш API ключ">
+			</div>
+			<button class="aaa-form__button" id="load-btn">Загрузить сделки</button>
+			<div id="error" class="aaa-form__error"></div>
+		</div>
+
+		<div id="deals-accordion" class="aaa-accordion"></div>
+	</div>
+
+	<script src="scripts/scripts.js"></script>
+
+	<div style="display: none;">
+		https://www.amocrm.ru/oauth?client_id=87a0b8a7-bde1-4632-94d0-906bdbd97cd9&state=&mode=post_message
+
+	</div>
+
+</body>
+
+</html>
